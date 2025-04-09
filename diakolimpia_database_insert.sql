@@ -194,56 +194,45 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Szűcs Levente', 9, 'Középpályás', 10, '71012345686'),
 ('Takács Dezső', 10, 'Csatár', 10, '71012345687'),
 
--- 10. Adatok beszúrása a Merkozes táblába (Labdarúgás)
+-- 10. Adatok beszúrása a Merkozes táblába (Labdarúgás) - 10 csapatos verzió, hosszabbítással/büntetőkkel
 
--- Csoportmérkőzések
+-- Javított adatok a Merkozes táblához
+
+-- Csoportmérkőzések (ahogy eddig voltak)
 INSERT INTO Merkozes (datum, helyszin, sportag_id, csapat1_id, csapat2_id, csapat1_pont, csapat2_pont, hosszabbitas, buntetoparbaj, megjegyzes, fordulo, merkozes_tipus) VALUES
 ('2024-04-10 09:00:00', 'Központi Sportcsarnok', 1, 1, 2, 2, 1, FALSE, FALSE, 'A csoport 1. forduló', 1, 'csoportmerkozes'),
-('2024-04-10 10:30:00', 'Központi Sportcsarnok', 1, 4, 5, 1, 3, FALSE, FALSE, 'B csoport 1. forduló', 1, 'csoportmerkozes'),
-('2024-04-10 12:00:00', 'Központi Sportcsarnok', 1, 7, 8, 0, 2, FALSE, FALSE, 'C csoport 1. forduló', 1, 'csoportmerkozes'),
-('2024-04-10 13:30:00', 'Központi Sportcsarnok', 1, 1, 3, 3, 0, FALSE, FALSE, 'A csoport 2. forduló', 2, 'csoportmerkozes'),
-('2024-04-10 15:00:00', 'Központi Sportcsarnok', 1, 4, 6, 2, 1, FALSE, FALSE, 'B csoport 2. forduló', 2, 'csoportmerkozes'),
-('2024-04-10 16:30:00', 'Központi Sportcsarnok', 1, 7, 9, 1, 1, FALSE, FALSE, 'C csoport 2. forduló', 2, 'csoportmerkozes'),
-('2024-04-10 18:00:00', 'Központi Sportcsarnok', 1, 2, 3, 1, 2, FALSE, FALSE, 'A csoport 3. forduló', 3, 'csoportmerkozes'),
-('2024-04-10 19:30:00', 'Központi Sportcsarnok', 1, 5, 6, 0, 0, FALSE, FALSE, 'B csoport 3. forduló', 3, 'csoportmerkozes'),
-('2024-04-10 21:00:00', 'Központi Sportcsarnok', 1, 8, 9, 3, 2, FALSE, FALSE, 'C csoport 3. forduló', 3, 'csoportmerkozes'),
-('2024-04-11 09:00:00', 'Központi Sportcsarnok', 1, 2, 5, 2, 0, FALSE, FALSE, 'A-B keresztjáték', 4, 'kozepdonto'), -- AI - BII
-('2024-04-11 10:30:00', 'Központi Sportcsarnok', 1, 4, 1, 1, 1, TRUE, FALSE, 'B-A keresztjáték', 4, 'kozepdonto'), -- BI - AII
-('2024-04-11 12:00:00', 'Központi Sportcsarnok', 1, 7, 10, 3, 1, FALSE, FALSE, 'C-D keresztjáték', 4, 'kozepdonto'), -- CI - DII
-('2024-04-11 13:30:00', 'Központi Sportcsarnok', 1, 10, 8, 0, 2, FALSE, FALSE, 'D-C keresztjáték', 4, 'kozepdonto'), -- DI - CII
-('2024-04-11 15:00:00', 'Központi Sportcsarnok', 1, 4, 10, 2, 1, FALSE, FALSE, '5-8. helyért', 5, 'helyoszto'), -- E
-('2024-04-11 16:30:00', 'Központi Sportcsarnok', 1, 1, 10, 0, 3, FALSE, FALSE, '5-8. helyért', 5, 'helyoszto'), -- F
-('2024-04-11 18:00:00', 'Központi Sportcsarnok', 1, 1, 8, 1, 2, FALSE, FALSE, 'Elődöntő', 5, 'elodonto'), -- G
-('2024-04-11 19:30:00', 'Központi Sportcsarnok', 1, 4, 7, 0, 1, FALSE, FALSE, 'Elődöntő', 5, 'elodonto'), -- H
-('2024-04-12 10:00:00', 'Központi Sportcsarnok', 1, 1, 4, 2, 1, FALSE, FALSE, '7-8. helyért', 6, 'helyoszto'),
-('2024-04-12 11:30:00', 'Központi Sportcsarnok', 1, 10, 10, 1, 0, FALSE, FALSE, '5-6. helyért', 6, 'helyoszto'),
-('2024-04-12 13:00:00', 'Központi Sportcsarnok', 1, 1, 4, 3, 2, FALSE, FALSE, '3-4. helyért', 6, 'helyoszto'),
-('2024-04-12 14:30:00', 'Központi Sportcsarnok', 1, 8, 7, 1, 0, FALSE, FALSE, '1-2. helyért', 6, 'helyoszto');
+('2024-04-10 10:30:00', 'Központi Sportcsarnok', 1, 3, 4, 1, 3, FALSE, FALSE, 'A csoport 1. forduló', 1, 'csoportmerkozes'),
+('2024-04-10 12:00:00', 'Központi Sportcsarnok', 1, 5, 1, 0, 2, FALSE, FALSE, 'A csoport 2. forduló', 1, 'csoportmerkozes'),
+('2024-04-10 13:30:00', 'Központi Sportcsarnok', 1, 2, 3, 3, 0, FALSE, FALSE, 'A csoport 2. forduló', 1, 'csoportmerkozes'),
+('2024-04-10 15:00:00', 'Központi Sportcsarnok', 1, 4, 5, 2, 1, FALSE, FALSE, 'A csoport 3. forduló', 1, 'csoportmerkozes'),
+('2024-04-10 16:30:00', 'Központi Sportcsarnok', 1, 1, 4, 1, 1, FALSE, FALSE, 'A csoport 4. forduló', 1, 'csoportmerkozes'),
+('2024-04-10 18:00:00', 'Központi Sportcsarnok', 1, 2, 5, 1, 2, FALSE, FALSE, 'A csoport 4. forduló', 1, 'csoportmerkozes'),
+('2024-04-10 19:30:00', 'Központi Sportcsarnok', 1, 3, 1, 0, 0, FALSE, FALSE, 'A csoport 5. forduló', 1, 'csoportmerkozes'),
+('2024-04-10 21:00:00', 'Központi Sportcsarnok', 1, 4, 2, 3, 2, FALSE, FALSE, 'A csoport 5. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 09:00:00', 'Központi Sportcsarnok', 1, 5, 3, 2, 0, FALSE, FALSE, 'A csoport 5. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 10:30:00', 'Központi Sportcsarnok', 1, 6, 7, 1, 3, FALSE, FALSE, 'B csoport 1. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 12:00:00', 'Központi Sportcsarnok', 1, 8, 9, 0, 2, FALSE, FALSE, 'B csoport 1. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 13:30:00', 'Központi Sportcsarnok', 1, 10, 6, 3, 1, FALSE, FALSE, 'B csoport 2. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 15:00:00', 'Központi Sportcsarnok', 1, 7, 8, 2, 1, FALSE, FALSE, 'B csoport 2. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 16:30:00', 'Központi Sportcsarnok', 1, 9, 10, 1, 1, FALSE, FALSE, 'B csoport 3. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 18:00:00', 'Központi Sportcsarnok', 1, 6, 9, 1, 2, FALSE, FALSE, 'B csoport 4. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 19:30:00', 'Központi Sportcsarnok', 1, 7, 10, 0, 3, FALSE, FALSE, 'B csoport 4. forduló', 1, 'csoportmerkozes'),
+('2024-04-11 21:00:00', 'Központi Sportcsarnok', 1, 8, 6, 3, 2, FALSE, FALSE, 'B csoport 5. forduló', 1, 'csoportmerkozes'),
+('2024-04-12 09:00:00', 'Központi Sportcsarnok', 1, 9, 8, 2, 0, FALSE, FALSE, 'B csoport 5. forduló', 1, 'csoportmerkozes'),
+('2024-04-12 10:30:00', 'Központi Sportcsarnok', 1, 10, 8, 1, 0, FALSE, FALSE, 'B csoport 5. forduló', 1, 'csoportmerkozes'),
 
--- 9-12. helyért
-INSERT INTO Merkozes (datum, helyszin, sportag_id, csapat1_id, csapat2_id, csapat1_pont, csapat2_pont, hosszabbitas, buntetoparbaj, megjegyzes, fordulo, merkozes_tipus) VALUES
-('2024-04-11 10:00:00', 'Központi Sportcsarnok', 1, 3, 6, 2, 1, FALSE, FALSE, '9-12. helyért', 4, 'helyoszto'),
-('2024-04-11 11:30:00', 'Központi Sportcsarnok', 1, 9, 10, 1, 3, FALSE, FALSE, '9-12. helyért', 4, 'helyoszto'),
-('2024-04-12 10:00:00', 'Központi Sportcsarnok', 1, 6, 9, 0, 2, FALSE, FALSE, '11-12. helyért', 5, 'helyoszto'),
-('2024-04-12 11:30:00', 'Központi Sportcsarnok', 1, 3, 10, 1, 2, FALSE, FALSE, '9-10. helyért', 5, 'helyoszto'),
+-- Helyosztók (javítva a Diákolimpia szabályai szerint)
+('2024-04-12 12:00:00', 'Központi Sportcsarnok', 1, 1, 2, 2, 1, FALSE, FALSE, 'Elődöntő', 2, 'helyoszto'),  -- A1 - B2
+('2024-04-12 13:30:00', 'Központi Sportcsarnok', 1, 3, 4, 1, 0, FALSE, FALSE, 'Elődöntő', 2, 'helyoszto'),  -- B1 - A2
+('2024-04-12 15:00:00', 'Központi Sportcsarnok', 1, 5, 6, 0, 0, FALSE, FALSE, '5-8. helyért', 2, 'helyoszto'),  -- A3 - B4
+('2024-04-12 16:30:00', 'Központi Sportcsarnok', 1, 7, 8, 3, 1, FALSE, FALSE, '5-8. helyért', 2, 'helyoszto'),  -- B3 - A4
+('2024-04-12 18:00:00', 'Központi Sportcsarnok', 1, 9, 10, 1, 2, FALSE, FALSE, '9-10. helyért', 2, 'helyoszto'), -- A5 - B5
+('2024-04-13 09:00:00', 'Központi Sportcsarnok', 1, 1, 4, 2, 1, TRUE, FALSE, 'Döntő', 2, 'helyoszto'),    -- Győztes(A1-B2) - Győztes(B1-A2)
+('2024-04-13 10:30:00', 'Központi Sportcsarnok', 1, 2, 3, 1, 0, FALSE, TRUE, '3-4. helyért', 2, 'helyoszto'),  -- Vesztes(A1-B2) - Vesztes(B1-A2)
+('2024-04-13 12:00:00', 'Központi Sportcsarnok', 1, 5, 8, 0, 0, TRUE, TRUE, '5-6. helyért', 2, 'helyoszto'),  -- Győztes(A3-B4) - Győztes(B3-A4)
+('2024-04-13 13:30:00', 'Központi Sportcsarnok', 1, 6, 7, 3, 1, FALSE, FALSE, '7-8. helyért', 2, 'helyoszto')   -- Vesztes(A3-B4) - Vesztes(B3-A4)
 
--- 13-16. helyért
-INSERT INTO Merkozes (datum, helyszin, sportag_id, csapat1_id, csapat2_id, csapat1_pont, csapat2_pont, hosszabbitas, buntetoparbaj, megjegyzes, fordulo, merkozes_tipus) VALUES
-('2024-04-11 12:00:00', 'Központi Sportcsarnok', 1, 1, 4, 3, 1, FALSE, FALSE, '13-16. helyért', 4, 'helyoszto'),
-('2024-04-11 13:30:00', 'Központi Sportcsarnok', 1, 7, 10, 1, 2, FALSE, FALSE, '13-16. helyért', 4, 'helyoszto'),
-('2024-04-12 12:00:00', 'Központi Sportcsarnok', 1, 4, 7, 2, 0, FALSE, FALSE, '15-16. helyért', 5, 'helyoszto'),
-('2024-04-12 13:30:00', 'Központi Sportcsarnok', 1, 1, 10, 1, 0, FALSE, FALSE, '13-14. helyért', 5, 'helyoszto'),
-
--- 17-20. helyért
-INSERT INTO Merkozes (datum, helyszin, sportag_id, csapat1_id, csapat2_id, csapat1_pont, csapat2_pont, hosszabbitas, buntetoparbaj, megjegyzes, fordulo, merkozes_tipus) VALUES
-('2024-04-11 14:00:00', 'Központi Sportcsarnok', 1, 2, 5, 2, 1, FALSE, FALSE, '17-20. helyért', 4, 'helyoszto'),
-('2024-04-11 15:30:00', 'Központi Sportcsarnok', 1, 8, 10, 0, 1, FALSE, FALSE, '17-20. helyért', 4, 'helyoszto'),
-('2024-04-12 14:00:00', 'Központi Sportcsarnok', 1, 5, 8, 1, 0, FALSE, FALSE, '19-20. helyért', 5, 'helyoszto'),
-('2024-04-12 15:30:00', 'Központi Sportcsarnok', 1, 2, 10, 0, 1, FALSE, FALSE, '17-18. helyért', 5, 'helyoszto');
-
--- Adatok beszúrása a Csoport táblába
+-- Adatok beszúrása a Csoport táblába (10 csapatos verzió)
 INSERT INTO Csoport (nev) VALUES
 ('A'),
-('B'),
-('C'),
-('D');
+('B');

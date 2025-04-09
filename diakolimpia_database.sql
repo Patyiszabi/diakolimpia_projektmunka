@@ -10,7 +10,7 @@ CREATE TABLE Sportag (
 
 CREATE TABLE Csoport (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nev ENUM('A', 'B', 'C', 'D') NOT NULL
+    nev ENUM('A', 'B') NOT NULL
 );
 
 CREATE TABLE Csapat (
@@ -49,7 +49,7 @@ CREATE TABLE Merkozes (
     buntetoparbaj BOOLEAN DEFAULT FALSE,
     megjegyzes TEXT,
     fordulo INT,
-    merkozes_tipus ENUM('csoportmérkőzés', 'középdöntő', 'elődöntő', 'helyosztó') NOT NULL,
+    merkozes_tipus ENUM('csoportmérkőzés', 'helyosztó') NOT NULL,
     FOREIGN KEY (sportag_id) REFERENCES Sportag(id),
     FOREIGN KEY (csapat1_id) REFERENCES Csapat(id),
     FOREIGN KEY (csapat2_id) REFERENCES Csapat(id)
@@ -110,7 +110,7 @@ CREATE TABLE HivatalosSzemely (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nev VARCHAR(100) NOT NULL,
     igazolasi_szam VARCHAR(50) NOT NULL,
-    funkcio ENUM('Vezetőedző', 'Edző 1', 'Edző 2', 'Tech. Vezető', 'Orvos', 'Gyúró') NOT NULL,
+    funkcio ENUM('Vezetőedző','Gyúró') NOT NULL,
     csapat_id INT,
     FOREIGN KEY (csapat_id) REFERENCES Csapat(id),
     UNIQUE(igazolasi_szam)
