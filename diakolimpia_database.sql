@@ -1,22 +1,24 @@
-
 CREATE DATABASE IF NOT EXISTS diakolimpia
 CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci;
 
-
 USE diakolimpia;
-
 
 CREATE TABLE Sportag (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nev VARCHAR(50) NOT NULL
 );
 
+CREATE TABLE Csoport (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nev ENUM('A', 'B', 'C', 'D') NOT NULL
+);
 
 CREATE TABLE Csapat (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nev VARCHAR(100) NOT NULL,
     iskola_nev VARCHAR(100),
     sportag_id INT,
+    csoport_id INT,
     FOREIGN KEY (sportag_id) REFERENCES Sportag(id)
 );
 
@@ -29,7 +31,8 @@ CREATE TABLE Jatekos (
     csapat_id INT,
     diakigazolvany_azonositoszam VARCHAR(50),
     FOREIGN KEY (csapat_id) REFERENCES Csapat(id),
-    UNIQUE(csapat_id, mezszam)
+    UNIQUE(csapat_id, mezszam),
+    UNIQUE(diakigazolvany_azonositoszam)
 );
 
 
@@ -45,11 +48,13 @@ CREATE TABLE Merkozes (
     hosszabbitas BOOLEAN DEFAULT FALSE,
     buntetoparbaj BOOLEAN DEFAULT FALSE,
     megjegyzes TEXT,
+    fordulo INT,
+    merkozes_tipus ENUM('csoportmérkőzés', 'középdöntő', 'elődöntő', 'helyosztó') NOT NULL,
     FOREIGN KEY (sportag_id) REFERENCES Sportag(id),
     FOREIGN KEY (csapat1_id) REFERENCES Csapat(id),
     FOREIGN KEY (csapat2_id) REFERENCES Csapat(id)
+    UNIQUE(datum, helyszin, csapat1_id, csapat2_id)
 );
-
 
 CREATE TABLE Esemeny (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -62,13 +67,12 @@ CREATE TABLE Esemeny (
     FOREIGN KEY (jatekos_id) REFERENCES Jatekos(id)
 );
 
-
 CREATE TABLE Biro (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nev VARCHAR(100),
-    szerepkor ENUM('Játékvezető', 'Asszisztens1', 'Asszistens2', 'Tartalékjátékvezető') NOT NULL
+    nev VARCHAR(100) NOT NULL,
+    szerepkor ENUM('Játékvezető', 'Asszisztens1', 'Asszisztens2', 'Tartalékjátékvezető') NOT NULL,
+    UNIQUE(nev, szerepkor)
 );
-
 
 CREATE TABLE MerkozesBiro (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -76,8 +80,8 @@ CREATE TABLE MerkozesBiro (
     biro_id INT,
     FOREIGN KEY (merkozes_id) REFERENCES Merkozes(id),
     FOREIGN KEY (biro_id) REFERENCES Biro(id)
-);
 
+);
 
 CREATE TABLE Csere (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -85,12 +89,12 @@ CREATE TABLE Csere (
     lejovo_jatekos_id INT,
     bejovo_jatekos_id INT,
     ido INT,
-    hazai_csapat BOOLEAN, 
+    hazai_csapat BOOLEAN,
     FOREIGN KEY (merkozes_id) REFERENCES Merkozes(id),
     FOREIGN KEY (lejovo_jatekos_id) REFERENCES Jatekos(id),
     FOREIGN KEY (bejovo_jatekos_id) REFERENCES Jatekos(id)
-);
 
+);
 
 CREATE TABLE Serules (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -104,9 +108,11 @@ CREATE TABLE Serules (
 
 CREATE TABLE HivatalosSzemely (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nev VARCHAR(100),
-    igazolasi_szam VARCHAR(50),
-    funkcio ENUM('Vezetőedző', 'Edző 1', 'Edző 2', 'Tech. Vezető', 'Orvos', 'Gyúró'),
+    nev VARCHAR(100) NOT NULL,
+    igazolasi_szam VARCHAR(50) NOT NULL,
+    funkcio ENUM('Vezetőedző', 'Edző 1', 'Edző 2', 'Tech. Vezető', 'Orvos', 'Gyúró') NOT NULL,
     csapat_id INT,
-    FOREIGN KEY (csapat_id) REFERENCES Csapat(id)
+    FOREIGN KEY (csapat_id) REFERENCES Csapat(id),
+    UNIQUE(igazolasi_szam)
 );
+
