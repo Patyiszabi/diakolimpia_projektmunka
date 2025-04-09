@@ -22,7 +22,6 @@ CREATE TABLE Csapat (
     FOREIGN KEY (sportag_id) REFERENCES Sportag(id)
 );
 
-
 CREATE TABLE Jatekos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nev VARCHAR(100) NOT NULL,
@@ -34,7 +33,6 @@ CREATE TABLE Jatekos (
     UNIQUE(csapat_id, mezszam),
     UNIQUE(diakigazolvany_azonositoszam)
 );
-
 
 CREATE TABLE Merkozes (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -52,7 +50,7 @@ CREATE TABLE Merkozes (
     merkozes_tipus ENUM('csoportmérkőzés', 'helyosztó') NOT NULL,
     FOREIGN KEY (sportag_id) REFERENCES Sportag(id),
     FOREIGN KEY (csapat1_id) REFERENCES Csapat(id),
-    FOREIGN KEY (csapat2_id) REFERENCES Csapat(id)
+    FOREIGN KEY (csapat2_id) REFERENCES Csapat(id),
     UNIQUE(datum, helyszin, csapat1_id, csapat2_id)
 );
 
@@ -80,7 +78,6 @@ CREATE TABLE MerkozesBiro (
     biro_id INT,
     FOREIGN KEY (merkozes_id) REFERENCES Merkozes(id),
     FOREIGN KEY (biro_id) REFERENCES Biro(id)
-
 );
 
 CREATE TABLE Csere (
@@ -93,7 +90,6 @@ CREATE TABLE Csere (
     FOREIGN KEY (merkozes_id) REFERENCES Merkozes(id),
     FOREIGN KEY (lejovo_jatekos_id) REFERENCES Jatekos(id),
     FOREIGN KEY (bejovo_jatekos_id) REFERENCES Jatekos(id)
-
 );
 
 CREATE TABLE Serules (
@@ -115,4 +111,3 @@ CREATE TABLE HivatalosSzemely (
     FOREIGN KEY (csapat_id) REFERENCES Csapat(id),
     UNIQUE(igazolasi_szam)
 );
-

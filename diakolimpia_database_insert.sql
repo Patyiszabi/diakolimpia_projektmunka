@@ -164,8 +164,8 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Tóth Bertalan', 6, 'Csatár', 8, '70789012361'),
 ('Gergely Henrik', 13, 'Középpályás', 8, '70890123462'),
 ('Juhász Ignác', 14, 'Csatár', 8, '70890123463'),
-('Mészáros Jolán', 15, 'Védő', 8, '70890123464');
-('Nagy Kálmán', 10, 'Csatár', 8, '70890123465'),
+('Mészáros Jolán', 15, 'Védő', 8, '70890123464'),
+('Nagy Kálmán', 10, 'Csatár', 8, '70890123465');
 
 
 -- 9. csapat (Bajnokok ISE) játékosai
@@ -230,7 +230,7 @@ INSERT INTO Merkozes (datum, helyszin, sportag_id, csapat1_id, csapat2_id, csapa
 ('2024-04-13 09:00:00', 'Központi Sportcsarnok', 1, 1, 4, 2, 1, TRUE, FALSE, 'Döntő', 2, 'helyosztó'),    -- Győztes(A1-B2) - Győztes(B1-A2)
 ('2024-04-13 10:30:00', 'Központi Sportcsarnok', 1, 2, 3, 1, 0, FALSE, TRUE, '3-4. helyért', 2, 'helyosztó'),  -- Vesztes(A1-B2) - Vesztes(B1-A2)
 ('2024-04-13 12:00:00', 'Központi Sportcsarnok', 1, 5, 8, 0, 0, TRUE, TRUE, '5-6. helyért', 2, 'helyosztó'),  -- Győztes(A3-B4) - Győztes(B3-A4)
-('2024-04-13 13:30:00', 'Központi Sportcsarnok', 1, 6, 7, 3, 1, FALSE, FALSE, '7-8. helyért', 2, 'helyosztó')   -- Vesztes(A3-B4) - Vesztes(B3-A4)
+('2024-04-13 13:30:00', 'Központi Sportcsarnok', 1, 6, 7, 3, 1, FALSE, FALSE, '7-8. helyért', 2, 'helyosztó');   -- Vesztes(A3-B4) - Vesztes(B3-A4)
 
 -- Adatok beszúrása a Csoport táblába (10 csapatos verzió)
 INSERT INTO Csoport (nev) VALUES
@@ -547,15 +547,6 @@ INSERT INTO MerkozesBiro (merkozes_id, biro_id) VALUES
 (29, 7),  --             Simon András (Asszisztens2)
 (29, 8);   --             Varga Éva (Tartalékjátékvezető)
 
-Rendben, módosítjuk a Csere tábla adatfeltöltését is a 2x12 perces játékidőhöz igazodva.
-
-Módosított adatgenerálási logika (Csere tábla):
-
-Mérkőzésenként véletlenszerűen generáljuk a cserék számát 0 és 10 között (összesen), biztosítva, hogy csapatonként maximum 5 csere legyen.
-A cserék időpontját (percét) véletlenszerűen generáljuk 1 és 24 perc között (a 2x12 perces játékidő miatt).
-A lejovo_jatekos_id és bejovo_jatekos_id értékeket a mérkőzésen részt vevő csapatok játékosai közül választjuk ki.
-A hazai_csapat értékét véletlenszerűen állítjuk be (TRUE vagy FALSE).
-SQL
 
 -- Csere tábla feltöltése (módosított, 2x12 perchez igazítva)
 INSERT INTO Csere (merkozes_id, lejovo_jatekos_id, bejovo_jatekos_id, ido, hazai_csapat) VALUES
