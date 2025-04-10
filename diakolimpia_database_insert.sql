@@ -5,6 +5,11 @@ INSERT INTO Sportag (nev) VALUES
 ('Kézilabda'),
 ('Íjászat');
 
+-- Adatok beszúrása a Csoport táblába (10 csapatos verzió)
+INSERT INTO Csoport (nev) VALUES
+('A'),
+('B');
+
 -- Labdarúgás – Csoport A (csoport_id = 1), B (csoport_id = 2)
 INSERT INTO Csapat (nev, iskola_nev, sportag_id, csoport_id) VALUES
 ('Gólgép FC', 'Budapesti Fazekas Mihály Gimnázium', 1, 1),
@@ -230,10 +235,7 @@ INSERT INTO Merkozes (datum, helyszin, sportag_id, csapat1_id, csapat2_id, csapa
 ('2024-04-13 12:00:00', 'Központi Sportcsarnok', 1, 5, 8, 0, 0, TRUE, TRUE, '5-6. helyért', 2, 'helyosztó'),  -- Győztes(A3-B4) - Győztes(B3-A4)
 ('2024-04-13 13:30:00', 'Központi Sportcsarnok', 1, 6, 7, 3, 1, FALSE, FALSE, '7-8. helyért', 2, 'helyosztó');   -- Vesztes(A3-B4) - Vesztes(B3-A4)
 
--- Adatok beszúrása a Csoport táblába (10 csapatos verzió)
-INSERT INTO Csoport (nev) VALUES
-('A'),
-('B');
+
 
 -- Esemeny tábla feltöltése (módosítva a játékosazonosítókhoz)
 
