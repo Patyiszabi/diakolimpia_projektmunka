@@ -75,7 +75,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Kiss Gábor', 7, 'Csatár', 1, '70123456795'),
 ('Molnár Tamás', 8, 'Védő', 1, '70123456796'),
 ('Simon Imre', 9, 'Középpályás', 1, '70123456797'),
-('Papp János', 10, 'Csatár', 1, '70123456798'),
+('Papp János', 10, 'Csatár', 1, '70123456798');
 
 -- 2. csapat (Titánok SE) játékosai
 INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositoszam) VALUES
@@ -88,7 +88,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Pál Alex', 7, 'Csatár', 2, '70234567896'),
 ('Szűcs Tibor', 8, 'Védő', 2, '70234567897'),
 ('Takács Zoltán', 9, 'Középpályás', 2, '70234567898'),
-('Bognár Ágoston', 10, 'Csatár', 2, '70234567899'),
+('Bognár Ágoston', 10, 'Csatár', 2, '70234567899');
 
 
 -- 3. csapat (Oroszlánok SC) játékosai
@@ -102,7 +102,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Bodnár Norbert', 7, 'Csatár', 3, '70345678907'),
 ('Szalai Olivér', 8, 'Védő', 3, '70345678908'),
 ('Deák Róbert', 9, 'Középpályás', 3, '70345678909'),
-('Varga Quintin', 10, 'Csatár', 3, '70345678910'),
+('Varga Quintin', 10, 'Csatár', 3, '70345678910');
 
 
 -- 4. csapat (Csillagok DSE) játékosai
@@ -116,7 +116,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Németh Csongor', 7, 'Csatár', 4, '70456789018'),
 ('Farkas Dezső', 8, 'Védő', 4, '70456789019'),
 ('Rácz Edit', 9, 'Középpályás', 4, '70456789020'),
-('Oláh Ferenc', 10, 'Csatár', 4, '70456789021'),
+('Oláh Ferenc', 10, 'Csatár', 4, '70456789021');
 
 -- 5. csapat (Hurrikán TE) játékosai
 INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositoszam) VALUES
@@ -129,7 +129,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Rácz Richárd', 7, 'Csatár', 5, '70567890129'),
 ('Kelemen Szabolcs', 8, 'Védő', 5, '70567890130'),
 ('Orbán Tamás', 9, 'Középpályás', 5, '70567890131'),
-('Pál Ulrik', 10, 'Csatár', 5, '70567890132'),
+('Pál Ulrik', 10, 'Csatár', 5, '70567890132');
 
 
 -- 6. csapat (Sziklák BK) játékosai
@@ -143,7 +143,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Nagy Dániel', 7, 'Csatár', 6, '70678901240'),
 ('Horváth Zoltán', 8, 'Védő', 6, '70678901241'),
 ('Kovács Elek', 9, 'Középpályás', 6, '70678901242'),
-('Balogh Ferenc', 10, 'Csatár', 6, '70678901243'),
+('Balogh Ferenc', 10, 'Csatár', 6, '70678901243');
 
 
 -- 7. csapat (Villámok LC) játékosai
@@ -157,7 +157,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Takács Quintin', 7, 'Csatár', 7, '70789012351'),
 ('Bognár Richárd', 8, 'Védő', 7, '70789012352'),
 ('Simon Szabolcs', 9, 'Középpályás', 7, '70789012353'),
-('Dudás Tamás', 10, 'Csatár', 7, '70789012354'),
+('Dudás Tamás', 10, 'Csatár', 7, '70789012354');
 
 -- 8. csapat (Tornádók VSE) játékosai
 INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositoszam) VALUES
@@ -184,7 +184,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Orbán Patrik', 7, 'Csatár', 9, '70901234573'),
 ('Pál Quintin', 8, 'Védő', 9, '70901234574'),
 ('Szűcs Richárd', 9, 'Középpályás', 9, '70901234575'),
-('Takács Szabolcs', 10, 'Csatár', 9, '70901234576'),
+('Takács Szabolcs', 10, 'Csatár', 9, '70901234576');
 
 -- 10. csapat (Gólvadászok SI) játékosai
 INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositoszam) VALUES
@@ -197,7 +197,7 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Orbán Viktor', 7, 'Csatár', 10, '71012345684'),
 ('Pál Csongor', 8, 'Védő', 10, '71012345685'),
 ('Szűcs Levente', 9, 'Középpályás', 10, '71012345686'),
-('Takács Dezső', 10, 'Csatár', 10, '71012345687'),
+('Takács Dezső', 10, 'Csatár', 10, '71012345687');
 
 
 
@@ -316,7 +316,7 @@ INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 
 -- 13. mérkőzés (10. csapat vs. 6. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
-(13, 91, 10, 'Büntetőből'),
+(13, 91, 10, 'gól', 'Büntetőből'),
 (13, 51, 25, 'gól', 'Lábbal'),
 (13, 92, 40, 'gól', 'Szabadrúgásból'),
 (13, 93, 60, 'gól', 'Lábbal');
@@ -347,7 +347,7 @@ INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 
 -- 18. mérkőzés (8. csapat vs. 6. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
-(18, 71, 10, 'Büntetőből'),
+(18, 71, 10, 'gól', 'Büntetőből'),
 (18, 51, 28, 'gól', 'Lábbal'),
 (18, 72, 42, 'gól', 'Szabadrúgásból'),
 (18, 52, 68, 'gól', 'Lábbal'),
