@@ -19,7 +19,8 @@ CREATE TABLE Csapat (
     iskola_nev VARCHAR(100),
     sportag_id INT,
     csoport_id INT,
-    FOREIGN KEY (sportag_id) REFERENCES Sportag(id)
+    FOREIGN KEY (sportag_id) REFERENCES Sportag(id),
+    FOREIGN KEY (csoport_id) REFERENCES Csoport(id),
 );
 
 CREATE TABLE Jatekos (

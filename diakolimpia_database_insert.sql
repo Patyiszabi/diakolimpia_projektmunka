@@ -5,57 +5,57 @@ INSERT INTO Sportag (nev) VALUES
 ('Kézilabda'),
 ('Íjászat');
 
--- Adatok beszúrása a Csapat táblába (Labdarúgás)
-INSERT INTO Csapat (nev, iskola_nev, sportag_id) VALUES
-('Gólgép FC', 'Budapesti Fazekas Mihály Gimnázium', 1),
-('Titánok SE', 'Debreceni Református Kollégium Gimnáziuma', 1),
-('Oroszlánok SC', 'Eötvös József Gimnázium (Budapest)', 1),
-('Csillagok DSE', 'Radnóti Miklós Gimnázium (Szeged)', 1),
-('Hurrikán TE', 'Veszprémi Lovassy László Gimnázium', 1),
-('Sziklák BK', 'Pécsi Leőwey Klára Gimnázium', 1),
-('Villámok LC', 'Győri Révai Miklós Gimnázium', 1),
-('Tornádók VSE', 'Szegedi Tömörkény István Gimnázium', 1),
-('Bajnokok ISE', 'Miskolci Herman Ottó Gimnázium', 1),
-('Gólvadászok SI', 'Soproni Széchenyi István Gimnázium', 1);
+-- Labdarúgás – Csoport A (csoport_id = 1), B (csoport_id = 2)
+INSERT INTO Csapat (nev, iskola_nev, sportag_id, csoport_id) VALUES
+('Gólgép FC', 'Budapesti Fazekas Mihály Gimnázium', 1, 1),
+('Titánok SE', 'Debreceni Református Kollégium Gimnáziuma', 1, 1),
+('Oroszlánok SC', 'Eötvös József Gimnázium (Budapest)', 1, 1),
+('Csillagok DSE', 'Radnóti Miklós Gimnázium (Szeged)', 1, 1),
+('Hurrikán TE', 'Veszprémi Lovassy László Gimnázium', 1, 1),
+('Sziklák BK', 'Pécsi Leőwey Klára Gimnázium', 1, 2),
+('Villámok LC', 'Győri Révai Miklós Gimnázium', 1, 2),
+('Tornádók VSE', 'Szegedi Tömörkény István Gimnázium', 1, 2),
+('Bajnokok ISE', 'Miskolci Herman Ottó Gimnázium', 1, 2),
+('Gólvadászok SI', 'Soproni Széchenyi István Gimnázium', 1, 2);
 
--- Adatok beszúrása a Csapat táblába (Röplabda)
-INSERT INTO Csapat (nev, iskola_nev, sportag_id) VALUES
-('Repülő Ászok', 'ELTE Apáczai Csere János Gyakorlógimnázium (Budapest)', 2),
-('Torony SE', 'Budapesti Piarista Gimnázium', 2),
-('Hálóharcosok', 'Ady Endre Gimnázium (Debrecen)', 2),
-('Szervakirályok', 'Katona József Gimnázium (Kecskemét)', 2),
-('Ütőóriások', 'Zrínyi Ilona Gimnázium (Miskolc)', 2),
-('Sáncbetyárok', 'Nagy Lajos Gimnázium (Pécs)', 2),
-('Liberók Lángjai', 'Kölcsey Ferenc Gimnázium (Budapest)', 2),
-('Pontvadászok', 'Fazekas Mihály Gimnázium (Debrecen)', 2),
-('Dübörgő DSE', 'Veres Péter Gimnázium (Budapest)', 2),
-('Csodacsapat', 'Teleki Blanka Gimnázium (Székesfehérvár)', 2);
+-- Röplabda – nincs csoportosítás
+INSERT INTO Csapat (nev, iskola_nev, sportag_id, csoport_id) VALUES
+('Repülő Ászok', 'ELTE Apáczai Csere János Gyakorlógimnázium (Budapest)', 2, NULL),
+('Torony SE', 'Budapesti Piarista Gimnázium', 2, NULL),
+('Hálóharcosok', 'Ady Endre Gimnázium (Debrecen)', 2, NULL),
+('Szervakirályok', 'Katona József Gimnázium (Kecskemét)', 2, NULL),
+('Ütőóriások', 'Zrínyi Ilona Gimnázium (Miskolc)', 2, NULL),
+('Sáncbetyárok', 'Nagy Lajos Gimnázium (Pécs)', 2, NULL),
+('Liberók Lángjai', 'Kölcsey Ferenc Gimnázium (Budapest)', 2, NULL),
+('Pontvadászok', 'Fazekas Mihály Gimnázium (Debrecen)', 2, NULL),
+('Dübörgő DSE', 'Veres Péter Gimnázium (Budapest)', 2, NULL),
+('Csodacsapat', 'Teleki Blanka Gimnázium (Székesfehérvár)', 2, NULL);
 
--- Adatok beszúrása a Csapat táblába (Kézilabda)
-INSERT INTO Csapat (nev, iskola_nev, sportag_id) VALUES
-('Falábúak', 'Csokonai Vitéz Mihály Gimnázium (Debrecen)', 3),
-('Gólgyárosok', 'Ságvári Endre Gyakorló Gimnázium (Győr)', 3),
-('Bombaerők', 'Táncsics Mihály Gimnázium (Kaposvár)', 3),
-('Védőóriások', 'Révai Miklós Gimnázium (Győr)', 3),
-('Gyorskezűek', 'Bercsényi Miklós Gimnázium (Tatabánya)', 3),
-('Hétméteresek', 'Kisfaludy Károly Gimnázium (Mohács)', 3),
-('Szélvészek', 'Garay János Gimnázium (Szekszárd)', 3),
-('Agyagpuskák', 'Türr István Gimnázium (Pápa)', 3),
-('Cementarcok', 'Premontrei Rendi Gimnázium (Szombathely)', 3),
-('Izzadtságszag', 'Kodály Zoltán Gimnázium (Galánta)', 3);
+-- Kézilabda – nincs csoportosítás
+INSERT INTO Csapat (nev, iskola_nev, sportag_id, csoport_id) VALUES
+('Falábúak', 'Csokonai Vitéz Mihály Gimnázium (Debrecen)', 3, NULL),
+('Gólgyárosok', 'Ságvári Endre Gyakorló Gimnázium (Győr)', 3, NULL),
+('Bombaerők', 'Táncsics Mihály Gimnázium (Kaposvár)', 3, NULL),
+('Védőóriások', 'Révai Miklós Gimnázium (Győr)', 3, NULL),
+('Gyorskezűek', 'Bercsényi Miklós Gimnázium (Tatabánya)', 3, NULL),
+('Hétméteresek', 'Kisfaludy Károly Gimnázium (Mohács)', 3, NULL),
+('Szélvészek', 'Garay János Gimnázium (Szekszárd)', 3, NULL),
+('Agyagpuskák', 'Türr István Gimnázium (Pápa)', 3, NULL),
+('Cementarcok', 'Premontrei Rendi Gimnázium (Szombathely)', 3, NULL),
+('Izzadtságszag', 'Kodály Zoltán Gimnázium (Galánta)', 3, NULL);
 
--- Adatok beszúrása a Csapat táblába (Íjászat)
-INSERT INTO Csapat (nev, iskola_nev, sportag_id) VALUES
-('Nyílzápor', 'Bornemisza Péter Gimnázium (Budapest)', 4),
-('Célpontosok', 'II. Rákóczi Ferenc Gimnázium (Mátészalka)', 4),
-('Íjvirtuózok', 'Egri Dobó István Gimnázium', 4),
-('Sasszemek', 'József Attila Gimnázium (Ózd)', 4),
-('Reflexek', 'Szinyei Merse Pál Gimnázium (Budapest)', 4),
-('Húrtáncosok', 'Petőfi Sándor Gimnázium (Aszód)', 4),
-('Vesszőfutók', 'Kossuth Lajos Gimnázium (Mosonmagyaróvár)', 4),
-('Célkeresők', 'Pannonhalmi Bencés Gimnázium', 4),
-('Precíz Íjászok', 'Balassi Bálint Gimnázium (Esztergom)', 4),
-('Csodaspat', 'Vörösmarty Mihály Gimnázium (Budapest)', 4);
+-- Íjászat – nincs csoportosítás
+INSERT INTO Csapat (nev, iskola_nev, sportag_id, csoport_id) VALUES
+('Nyílzápor', 'Bornemisza Péter Gimnázium (Budapest)', 4, NULL),
+('Célpontosok', 'II. Rákóczi Ferenc Gimnázium (Mátészalka)', 4, NULL),
+('Íjvirtuózok', 'Egri Dobó István Gimnázium', 4, NULL),
+('Sasszemek', 'József Attila Gimnázium (Ózd)', 4, NULL),
+('Reflexek', 'Szinyei Merse Pál Gimnázium (Budapest)', 4, NULL),
+('Húrtáncosok', 'Petőfi Sándor Gimnázium (Aszód)', 4, NULL),
+('Vesszőfutók', 'Kossuth Lajos Gimnázium (Mosonmagyaróvár)', 4, NULL),
+('Célkeresők', 'Pannonhalmi Bencés Gimnázium', 4, NULL),
+('Precíz Íjászok', 'Balassi Bálint Gimnázium (Esztergom)', 4, NULL),
+('Csodaspat', 'Vörösmarty Mihály Gimnázium (Budapest)', 4, NULL);
 
 -- Adatok beszúrása a Jatekos táblába
 
@@ -194,11 +194,9 @@ INSERT INTO Jatekos (nev, mezszam, poszt, csapat_id, diakigazolvany_azonositosza
 ('Szűcs Levente', 9, 'Középpályás', 10, '71012345686'),
 ('Takács Dezső', 10, 'Csatár', 10, '71012345687'),
 
--- 10. Adatok beszúrása a Merkozes táblába (Labdarúgás) - 10 csapatos verzió, hosszabbítással/büntetőkkel
 
--- Javított adatok a Merkozes táblához
 
--- Csoportmérkőzések (ahogy eddig voltak)
+-- Csoportmérkőzések
 INSERT INTO Merkozes (datum, helyszin, sportag_id, csapat1_id, csapat2_id, csapat1_pont, csapat2_pont, hosszabbitas, buntetoparbaj, megjegyzes, fordulo, merkozes_tipus) VALUES
 ('2024-04-10 09:00:00', 'Központi Sportcsarnok', 1, 1, 2, 2, 1, FALSE, FALSE, 'A csoport 1. forduló', 1, 'csoportmérkőzés'),
 ('2024-04-10 10:30:00', 'Központi Sportcsarnok', 1, 3, 4, 1, 3, FALSE, FALSE, 'A csoport 1. forduló', 1, 'csoportmérkőzés'),
