@@ -546,7 +546,7 @@ INSERT INTO MerkozesBiro (merkozes_id, biro_id) VALUES
 (29, 8);   --             Varga Éva (Tartalékjátékvezető)
 
 
--- Csere tábla feltöltése (módosított, 2x12 perchez igazítva)
+-- Csere tábla feltöltése
 INSERT INTO Csere (merkozes_id, lejovo_jatekos_id, bejovo_jatekos_id, ido, hazai_csapat) VALUES
 (1, 1, 6, 11, TRUE),
 (1, 2, 7, 12, TRUE),
@@ -612,7 +612,7 @@ INSERT INTO Csere (merkozes_id, lejovo_jatekos_id, bejovo_jatekos_id, ido, hazai
 (20, 91, 96, 5, TRUE),
 (20, 81, 86, 13, FALSE);
 
--- Serules tábla feltöltése (módosított)
+-- Serules tábla feltöltése
 INSERT INTO Serules (merkozes_id, jatekos_id, ido, serules_tipus) VALUES
 (1, 1, 10, 'Boka ficam'),
 (1, 15, 22, 'Izomhúzódás'),
