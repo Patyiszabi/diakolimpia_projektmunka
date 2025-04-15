@@ -241,97 +241,97 @@ INSERT INTO Merkozes (datum, helyszin, sportag_id, csapat1_id, csapat2_id, csapa
 
 -- 1. mérkőzés (1. csapat vs. 2. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
-(1, 1, 15, 'gól', 'Szabadrúgásból'),
-(1, 2, 22, 'sárga', 'Szabálytalanság'),
-(1, 11, 40, 'gól', 'Lábbal'),
-(1, 3, 68, 'gól', 'Fejjel');
+(1, 1, 10, 'gól', 'Szabadrúgásból'),
+(1, 2, 25, 'sárga', 'Szabálytalanság'),
+(1, 11, 22, 'gól', 'Lábbal'),
+(1, 3, 12, 'gól', 'Fejjel');
 
 -- 2. mérkőzés (3. csapat vs. 4. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
-(2, 21, 30, 'gól', 'Büntetőből'),
-(2, 31, 40, 'gól', 'Lábbal'),
-(2, 32, 55, 'gól', 'Szabadrúgásból'),
-(2, 32, 80, 'gól', 'Lábbal');
+(2, 21, 10, 'gól', 'Büntetőből'),
+(2, 31, 13, 'gól', 'Lábbal'),
+(2, 32, 25, 'gól', 'Szabadrúgásból'),
+(2, 32, 29, 'gól', 'Lábbal');
 
 -- 3. mérkőzés (5. csapat vs. 1. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (3, 41, 10, 'gól', 'Lábbal'),
-(3, 4, 45, 'gól', 'Fejjel'),
-(3, 42, 70, 'sárga', 'Időhúzás');
+(3, 4, 23, 'gól', 'Fejjel'),
+(3, 42, 27, 'sárga', 'Időhúzás');
 
 -- 4. mérkőzés (2. csapat vs. 3. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (4, 11, 20, 'gól', 'Lábbal'),
-(4, 12, 35, 'gól', 'Fejjel'),
-(4, 21, 50, 'gól', 'Szabadrúgásból');
+(4, 12, 25, 'gól', 'Fejjel'),
+(4, 21, 30, 'gól', 'Szabadrúgásból');
 
 -- 5. mérkőzés (4. csapat vs. 5. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (5, 31, 12, 'gól', 'Lábbal'),
 (5, 41, 28, 'gól', 'Fejjel'),
-(5, 32, 63, 'gól', 'Szabadrúgásból');
+(5, 32, 30, 'gól', 'Szabadrúgásból');
 
 -- 6. mérkőzés (1. csapat vs. 4. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
-(6, 5, 30, 'gól', 'Büntetőből'),
-(6, 33, 55, 'gól', 'Lábbal'),
-(6, 6, 75, 'sárga', 'Szabálytalanság');
+(6, 5, 14, 'gól', 'Büntetőből'),
+(6, 33, 17, 'gól', 'Lábbal'),
+(6, 6, 29, 'sárga', 'Szabálytalanság');
 
 -- 7. mérkőzés (2. csapat vs. 5. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (7, 12, 18, 'gól', 'Lábbal'),
-(7, 44, 42, 'gól', 'Fejjel'),
-(7, 13, 60, 'sárga', 'Időhúzás'),
-(7, 14, 85, 'gól', 'Lábbal');
+(7, 44, 20, 'gól', 'Fejjel'),
+(7, 13, 24, 'sárga', 'Időhúzás'),
+(7, 14, 28, 'gól', 'Lábbal');
 
 -- 8. mérkőzés (3. csapat vs. 1. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
-(8, 21, 45, 'sárga', 'Szabálytalanság'),
-(8, 1, 70, 'sárga', 'Időhúzás');
+(8, 21, 15, 'sárga', 'Szabálytalanság'),
+(8, 1, 23, 'sárga', 'Időhúzás');
 
 -- 9. mérkőzés (4. csapat vs. 2. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (9, 31, 10, 'gól', 'Lábbal'),
 (9, 11, 25, 'gól', 'Fejjel'),
-(9, 32, 38, 'gól', 'Szabadrúgásból'),
-(9, 12, 52, 'gól', 'Lábbal'),
-(9, 33, 78, 'gól', 'Büntetőből');
+(9, 32, 26, 'gól', 'Szabadrúgásból'),
+(9, 12, 29, 'gól', 'Lábbal'),
+(9, 33, 30, 'gól', 'Büntetőből');
 
 -- 10. mérkőzés (5. csapat vs. 3. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (10, 41, 5, 'gól', 'Lábbal'),
-(10, 21, 65, 'gól', 'Fejjel');
+(10, 21, 13, 'gól', 'Fejjel');
 
 -- 11. mérkőzés (6. csapat vs. 7. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
-(11, 51, 20, 'gól', 'Lábbal'),
-(11, 61, 35, 'gól', 'Fejjel'),
-(11, 62, 48, 'gól', 'Szabadrúgásból'),
-(11, 63, 72, 'gól', 'Lábbal');
+(11, 51, 8, 'gól', 'Lábbal'),
+(11, 61, 15, 'gól', 'Fejjel'),
+(11, 62, 20, 'gól', 'Szabadrúgásból'),
+(11, 63, 27, 'gól', 'Lábbal');
 
 -- 12. mérkőzés (8. csapat vs. 9. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (12, 71, 15, 'gól', 'Lábbal'),
-(12, 81, 55, 'gól', 'Fejjel');
+(12, 81, 22, 'gól', 'Fejjel');
 
 -- 13. mérkőzés (10. csapat vs. 6. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (13, 91, 10, 'gól', 'Büntetőből'),
-(13, 51, 25, 'gól', 'Lábbal'),
-(13, 92, 40, 'gól', 'Szabadrúgásból'),
-(13, 93, 60, 'gól', 'Lábbal');
+(13, 51, 14, 'gól', 'Lábbal'),
+(13, 92, 19, 'gól', 'Szabadrúgásból'),
+(13, 93, 24, 'gól', 'Lábbal');
 
 -- 14. mérkőzés (7. csapat vs. 8. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (14, 61, 12, 'gól', 'Lábbal'),
-(14, 71, 30, 'gól', 'Fejjel'),
-(14, 62, 58, 'gól', 'Szabadrúgásból');
+(14, 71, 25, 'gól', 'Fejjel'),
+(14, 62, 29, 'gól', 'Szabadrúgásból');
 
 -- 15. mérkőzés (9. csapat vs. 10. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
 (15, 81, 22, 'gól', 'Lábbal'),
-(15, 91, 42, 'gól', 'Fejjel'),
-(15, 82, 70, 'sárga', 'Szabálytalanság');
+(15, 91, 24, 'gól', 'Fejjel'),
+(15, 82, 30, 'sárga', 'Szabálytalanság');
 
 -- 16. mérkőzés (6. csapat vs. 9. csapat)
 INSERT INTO Esemeny (merkozes_id, jatekos_id, perc, tipus, megjegyzes) VALUES
