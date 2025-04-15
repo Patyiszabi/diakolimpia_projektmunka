@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS diakolimpia
+CREATE DATABASE IF NOT EXISTS diakolimpia_labdarugas
 CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci;
 
-USE diakolimpia;
+USE diakolimpia_labdarugas;
 
 CREATE TABLE Sportag (
     id INT AUTO_INCREMENT PRIMARY KEY,
